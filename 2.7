@@ -1,0 +1,41 @@
+level2.7
+#include <iostream>
+using namespace std;
+int main() {
+    double a, b;
+    char op;
+    cout << "Birinci ededi daxil edin: ";
+    cin >> a;
+    cout << "Emel (+, -, *, /): ";
+    cin >> op;
+    cout << "Ikinci ededi daxil edin: ";
+    cin >> b;
+
+    switch (op) {
+        case '+': {
+            cout << "Netice: " << a + b;
+            break;
+        }
+        case '-': {
+            cout << "Netice: " << a - b;
+            break;
+        }
+        case '*': {
+            cout << "Netice: " << a * b;
+            break;
+        }
+        case '/': {
+            if (b != 0) {
+                cout << "Netice: " << a / b;
+            }
+            else {
+                cout << "0-a bolmek olmaz!";
+            }
+            break;
+        }
+        default: {
+            cout << "Yanlis emel daxil etdiniz.";
+        }
+    }
+    return 0;
+}
